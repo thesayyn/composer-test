@@ -3,6 +3,7 @@
     "description": "Core feature modules for tdadmin.",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Tekno Dev",
