@@ -1,0 +1,24 @@
+{
+    "name": "tdadmin/core",
+    "description": "Core feature modules for tdadmin.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tekno Dev",
+            "email": "contact@teknodev.biz"
+        }
+    ],
+    "require": {
+        "php":">=7.0.0",
+        "illuminate/contracts": "~5.5.0",
+        "illuminate/support": "~5.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TDAdmin\\Core\\": "src"
+        },
+        "files": [
+        ]
+    }
+}
