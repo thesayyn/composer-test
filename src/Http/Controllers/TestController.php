@@ -1,6 +1,6 @@
 <?php
 
-namespace TDAdmin\Core\Controllers;
+namespace TDAdmin\Core\Http;
 
 class TestController extends Controller
 {

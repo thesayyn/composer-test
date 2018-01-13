@@ -17,6 +17,7 @@ class TestServiceProvider extends ServiceProvider
     {
         $this->setupConfig();
         $this->setupRoutes();
+        $this->loadMigrationsFrom( $this->getMigrationsPath() );
     }
 
     /**
@@ -27,6 +28,11 @@ class TestServiceProvider extends ServiceProvider
         
     }
 
+    private function publishMigrations()
+    {
+        $path = $this->getMigrationsPath();
+        $this->publishes([$path => database_path('migrations')], 'migrations');
+    }
 
     protected function setupRoutes()
     {
@@ -53,8 +59,13 @@ class TestServiceProvider extends ServiceProvider
         return __DIR__.'/../routes/'.$this->key.'.php';
     }
 
+    protected function getMigrationsPath()
+    {
+        return __DIR__.'/../database/migrations/';
+    }
+
     protected function getRouteNamespace() : string
     {
-        return __NAMESPACE__ . '\Controllers';
+        return __NAMESPACE__ . '\Http';
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace TDAdmin\Core\Controllers;
+namespace TDAdmin\Core\Http;
 
 use Laravel\Lumen\Routing\Controller as BaseController;
 
